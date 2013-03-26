@@ -1,0 +1,25 @@
+// header icons are in the same sprite
+.icons {
+	background: url("../img/icons.png");
+	background-repeat: no-repeat;
+}
+
+.icon-layout {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+// all header icons share the same sprite and layout
+%abstract-icon {
+	@extend .icons, .icon-layout;
+}
+
+// All header button share the same look and feel
+%abstract-header-button {
+	@extend .tiny, .secondary, .button, .round;
+}
+
+%abstract-cta-button {
+	@extend .small, .radius, .button;
+	text-transform: uppercase;
+}

@@ -1,0 +1,19 @@
+.footer-links {
+	@extend .sub-nav;
+	display: table;
+	margin: 0 auto;
+}
+
+footer section div {
+	text-align: center;
+}
+
+footer {
+	section {
+		@extend .row;
+
+		> div {
+			@extend .small-8, .small-centered, .columns;
+		}
+	}
+}

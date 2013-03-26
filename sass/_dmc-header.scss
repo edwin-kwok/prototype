@@ -1,0 +1,66 @@
+.lock-icon, .cart-icon, .search-icon {
+	@extend %abstract-icon;
+}
+
+// configure the container of each icon to be the same dimension
+.lock-icon {
+	@include header-icon-container($icon-width: 11px, $icon-height: 14px);
+	background-position: 0 -384px;
+}
+
+.cart-icon {
+	@include header-icon-container($icon-width: 22px, $icon-height: 12px);
+	background-position: 0 -295px;
+}
+
+.search-icon {
+	@include header-icon-container($icon-width: 19px, $icon-height: 18px);
+	background-position: 0 -545px;
+}
+
+// disney logo is centered on screen, we will make it smaller for now
+// we will need design assets from modea
+.disney-logo {
+	min-width: 100px;
+	display: block;
+	margin: 0 auto;
+}
+
+// set all header buttons to the same style
+.sign-in-button, .shopping-cart-button, .search-button {
+	@extend %abstract-header-button;
+	margin: 0;
+}
+
+// push the sign-in and shopping cart buttons to align with the logo
+.sign-in-button {
+	margin-top: 28px;
+}
+
+.shopping-cart-button {
+	float: right;
+	margin-top: 28px;
+}
+
+.search-button {
+	@extend .expand;
+	margin-top: 10px;
+}
+
+header {
+	h1 {
+		display: none;
+	}
+
+	section {
+		@extend .row;
+
+		&.header-primary > div {
+			@extend .small-4, .columns;
+		}
+
+		&.header-secondary > div {
+			@extend .small-12, .columns;
+		}
+	}
+}

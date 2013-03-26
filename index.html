@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+
+	<title>DMC Frontend Prototype</title>
+
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/dmc.css" />
+
+	<script src="js/vendor/custom.modernizr.js"></script>
+</head>
+<body>
+	<!-- HEADER SECTION STARTS HERE -->
+	<header>
+		<h1>Disney Movie Club</h1>
+
+		<section class="header-primary">
+			<div>
+				<a class="sign-in-button" href="#">
+					<div class="lock-icon"></div>
+					<span>Sign In</span>
+				</a>
+			</div>
+
+			<div>
+				<img class="disney-logo" src="img/dmc-logo.png" />
+			</div>
+
+			<div>
+				<a class="shopping-cart-button" href="#">
+					<div class="cart-icon"></div>
+					<span>0 items</span>
+				</a>
+			</div>
+		</section>
+
+		<section class="header-secondary">
+			<div>
+				<a class="search-button" href="#">
+					<div class="search-icon"></div>
+					<span>Search for Movies</span>
+				</a>
+			</div>
+		</section>
+	</header>
+
+	<!-- MAIN CONTENT STARTS HERE -->
+	<section class="main-content">
+		<article class="featured-title">
+			<header>
+				<h2><small>This Month's Featured Title!</small></h2>
+			</header>
+
+			<section>
+				<div class="featured-image">
+					<img src="img/timothy-green.jpg" />
+				</div>
+
+				<ul class="featured-details">
+					<li class="title">The Odd Life of Timothy Green Blu-ray Combo Pack</li>
+					<li class="description">Includes both the Blu-ray and DVD of the movie</li>
+					<li class="price">$29.95</li>
+					<li class="bullet-item">"Perfect Entertainment For the Whole Family." - Pete Hammond, Boxoffice</li>
+					<li class="respond-before">Respond before: 4/16/2013</li>
+					<li class="cta-button">
+						<a class="accept-button" href="#">Yes! Add to Cart</a>
+						<a class="decline-button" href="#">Decline</a>
+						<a class="decide-later-button" href="#">I'll Decide Later</a>
+					</li>
+				</ul>
+			</section>
+		</article>
+<!--
+		<section class="double-feature">
+			<hr />
+
+			<ul data-orbit>
+				<li>
+					<img src="img/lady-tramp.jpg" />
+					<div class="orbit-caption">...</div>
+				</li>
+				<li>
+					<img src="img/incredibles.jpg" />
+					<div class="orbit-caption">...</div>
+				</li>
+			</ul>
+		</section>
+	</section>
+-->
+
+	<!-- FOOTER SECTION STARTS HERE -->
+	<footer>
+		<section>
+			<div>
+				<dl class="footer-links">
+					<dt>Links:</dt>
+					<dd><a href="https://disneymovieclub.go.com"> Main Site |</a></dd>
+					<dd><a class="active" href="#"> Mobile Site |</a></dd>
+					<dd><a href="#"> Profile</a></dd>
+				</dl>
+				<p><small>&copy;Disney. All rights reserved.</small></p>
+			</div>
+		</section>
+	</footer>
+
+	<script>
+		document.write('<script src=' + ('__proto__' in {}? 'js/vendor/zepto': 'js/vendor/jquery') + '.js><\/script>');
+	</script>
+  
+	<script src="js/foundation/foundation.js"></script>
+	<script src="js/foundation/foundation.alerts.js"></script>
+	<script src="js/foundation/foundation.clearing.js"></script>
+	<script src="js/foundation/foundation.cookie.js"></script>
+	<script src="js/foundation/foundation.dropdown.js"></script>
+	<script src="js/foundation/foundation.forms.js"></script>
+	<script src="js/foundation/foundation.joyride.js"></script>
+	<script src="js/foundation/foundation.magellan.js"></script>
+	<script src="js/foundation/foundation.orbit.js"></script>
+	<script src="js/foundation/foundation.placeholder.js"></script>
+	<script src="js/foundation/foundation.reveal.js"></script>
+	<script src="js/foundation/foundation.section.js"></script>
+	<script src="js/foundation/foundation.tooltips.js"></script>
+	<script src="js/foundation/foundation.topbar.js"></script>
+  
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+</html>

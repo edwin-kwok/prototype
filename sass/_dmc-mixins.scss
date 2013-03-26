@@ -1,0 +1,40 @@
+// to make sure the the sign-in, shopping cart and search buttons
+// all have a consistent height, we define a variable and initialize
+// it the maximum height of all buttons
+$HEADER-ICON-CONTAINER-MAX-HEIGHT: 18px;
+
+// this mixin will style the container for the sign-in, shopping
+// cart and search icons.  we will set the top and buttom margins
+// accordingly to ensure the containers are the same height
+@mixin header-icon-container($icon-width, $icon-height) {
+	$half: ($HEADER-ICON-CONTAINER-MAX-HEIGHT - $icon-height) / 2;
+	$remainder: ($HEADER-ICON-CONTAINER-MAX-HEIGHT - $icon-height) % 2;
+
+	width: $icon-width;
+	height: $icon-height;
+	// if there is a remainder, we will add it to the top margin
+	margin: $half + $remainder 0 $half 0;
+}
+
+@mixin linear-gradient($direction, $from-color, $to-color) {
+	background: -ms-linear-gradient($direction, $from-color, $to-color);
+	background: -o-linear-gradient($direction, $from-color, $to-color);
+	background: -webkit-linear-gradient($direction, $from-color, $to-color);
+	background: -moz-linear-gradient($direction, $from-color, $to-color);
+	background: linear-gradient($direction, $from-color, $to-color);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from-color}', endColorstr='#{$to-color}');
+}
+
+@mixin linear-gradient-button($border-color, $normal-from-color, $normal-to-color, $hover-from-color, $hover-to-color, $active-from-color, $active-to-color) {
+	border: solid 1px $border-color;
+
+	@include linear-gradient(top, $normal-from-color, $normal-to-color);
+
+	&:hover {
+		@include linear-gradient(top, $hover-from-color, $hover-to-color);
+	}
+
+	&:active {
+		@include linear-gradient(top, $active-from-color, $active-to-color);
+	}
+}
