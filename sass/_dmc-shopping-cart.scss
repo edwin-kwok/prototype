@@ -24,6 +24,8 @@
 }
 
 section.main-content {
+	margin-top: 15px;
+
 	article.shopping-cart {
 		section {
 			@extend .row;
