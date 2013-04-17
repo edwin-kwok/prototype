@@ -47,6 +47,7 @@
 ul.featured-details li.respond-before {
 	@extend .bullet-item;
 	color: red;
+		text-rendering: optimizeLegibility;
 		
 	font: {
 		family: "lucida grande", "lucida sans unicode", verdana, sans-serif;

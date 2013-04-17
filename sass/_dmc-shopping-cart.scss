@@ -1,0 +1,53 @@
+.remove-from-cart-button {
+	text-transform: none;
+	display: block;
+	clear: left;
+	//padding-bottom: 1.25em;
+}
+
+.check-out-button {
+	@extend %abstract-cta-button;
+	@include linear-gradient-button($border-color: #da7c0c, 
+		$normal-from-color: #faa51a, $normal-to-color: #f47a20, 
+		$hover-from-color: #f88e11, $hover-to-color: #f06015, 
+		$active-from-color: #f47a20, $active-to-color: #faa51a);
+}
+
+.continue-shopping-button {
+	@extend %abstract-cta-button;
+	@include linear-gradient-button($border-color: #b7b7b7, 
+		$normal-from-color: #ffffff, $normal-to-color: #ededed, 
+		$hover-from-color: #ffffff, $hover-to-color: #dcdcdc, 
+		$active-from-color: #ededed, $active-to-color: #ffffff);
+
+	color: #999;
+}
+
+section.main-content {
+	article.shopping-cart {
+		section {
+			@extend .row;
+		}
+
+		div.product-image {
+			@extend .small-4, .columns;
+
+			img {
+				display: block;
+				float: right;
+			}
+		}
+
+		div.product-details {
+			@extend .small-7, .columns;
+		}
+
+		div.right-padding {
+			@extend .small-1, .columns;
+		}
+
+		div.cta-buttons {
+			@extend .small-6, .small-centered, .columns;
+		}
+	}
+}
