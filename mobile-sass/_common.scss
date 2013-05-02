@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+// each will be a row on the grid
+.mdmc-header, .mdmc-body, .mdmc-footer {
+	@extend .row;
+}
+
+// TOPBAR
+// fix topbar, when activated, pushes page content down issue
+.mdmc-header .contain-to-grid.sticky {
+	height: $topbar-height;
+	position: relative;
+	z-index: 100;
+}
+
+// this selector is required for topbar to work properly
+.name h1 {
+	display: none;
+}
+
+// this is to move the default menu position from right to left
+.top-bar .toggle-topbar.menu-icon {
+	left: 15px;
+	top: 50%;
+	margin-top: -16px;
+	padding-left: 30px;
+	padding-right: 40px;
+}
+
+// move the search and shopping cart icons to the right
+.topbar-icons {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	margin-top: -16px;
+	padding-left: 40px;
+}
+
+// ORBIT
+.orbit-prev, .orbit-next, .orbit-slide-number, .orbit-timer {
+	visibility: hidden;
+}
+
+.orbit-container {
+	background-color: #fff;
+}
+
