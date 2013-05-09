@@ -1,16 +1,33 @@
 @charset "UTF-8";
 
+body { 
+	padding-top: 0 !important;
+}
+
 // each will be a row on the grid
 .mdmc-header, .mdmc-body, .mdmc-footer {
 	@extend .row;
+	
+	max-width: 100%;
+	
+	>section {
+		@extend .small-12, .columns;
+		
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.mdmc-header {
+	margin-bottom: $topbar-height;
 }
 
 // TOPBAR
 // fix topbar, when activated, pushes page content down issue
 .mdmc-header .contain-to-grid.sticky {
 	height: $topbar-height;
-	position: relative;
-	z-index: 100;
+	position: fixed;
+	z-index: 1000;
 }
 
 // this selector is required for topbar to work properly
@@ -40,8 +57,3 @@
 .orbit-prev, .orbit-next, .orbit-slide-number, .orbit-timer {
 	visibility: hidden;
 }
-
-.orbit-container {
-	background-color: #fff;
-}
-

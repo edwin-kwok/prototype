@@ -217,7 +217,12 @@
             self._stop_timer($slides_container);
             var direction = (data.delta_x < 0) ? 'next' : 'prev';
             data.active = true;
-            self._goto($slides_container, direction, function() {});
+            // self._goto($slides_container, direction, function() {});
+            
+            // EDK: Customized to start rotation after swipe
+            self._goto($slides_container, direction, function() {
+            	self._start_timer($slides_container);
+            });
           }
         })
         .on('touchend.fndtn.orbit', function(e) {

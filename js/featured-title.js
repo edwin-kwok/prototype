@@ -4,62 +4,43 @@
 
 "use strict";
 
-var FeaturedTitleView = (function() {
-	var carousel = null,
-		carouselRotating = true,
-
-		// stop carousel rotation if it is not already paused
-		stopCarousel = function() {
-			var timerPaused = $(".mdmc-featured-title.mdmc-carousel .orbit-timer.paused");
-			
-			if(timerPaused.length === 0) {
-				Foundation.libs.orbit._stop_timer(carousel);
-				carouselRotating = false;
-			}	
-		};
+var featuredTitleView = (function() {
+	var $carousel = $(".mdmc-featured-title.mdmc-carousel"),
+		$orbit = $carousel.children("ul[data-orbit]");
 	
 	var FeaturedTitleView = function() {
-		// call foundation library to initialize carousel
-		$(".mdmc-featured-title.mdmc-carousel").foundation("orbit", function(response) {
-			if(response.errors.length === 0) {
-				// find orbit in container
-				carousel = $(".mdmc-featured-title.mdmc-carousel ul[data-orbit]");
-				
-				if(carousel) {
-					// stop orbit rotation if there is no data-mdmc-autoplay attribute
-					if(carouselRotating && carousel.attr("data-mdmc-autoplay") === null) {
-						stopCarousel();
+		if($carousel.length > 0) {
+			$carousel.foundation("orbit", function(response) {
+				if(response.errors.length === 0) {
+					if($orbit.length <= 0) {
+						console.log("FeaturedTitleView: Cannot find ul[data-orbit]!");
 					}
 				}
 				else {
-					console.log("FeaturedTitleView: Failed to locate orbit!");
+					console.log("FeaturedTitleView: Failed to initialize orbit!");
 				}
-			}
-			else {
-				console.log("FeaturedTitleView: Failed to initialize orbit!");
-			}
-		});
+			});
+		}
+		else {
+			console.log("FeaturedTitleView: Cannot find .mdmc-featured-title.mdmc-carousel!");
+		}
 	}
 	
 	FeaturedTitleView.prototype.init = function() {
-		carousel.on("click touchstart", "li.active>div, li.active>div>img", function(event) {
-			if(event.type === "click") {
-				if(event.currentTarget.nodeName === "IMG") {
-					var catentryid = $(event.target).parents("li").attr("data-mdmc-catentryid");
-					alert(catentryid);
-					event.stopPropagation();
+		$orbit.on("click", "li.active>div, li.active>div>img", function(e) {
+			Foundation.libs.orbit._stop_timer($orbit);
+			
+			e.stopPropagation();
+			e.stopImmediatePropagation();
+			
+			if(e.type === "click") {
+				if(e.currentTarget.nodeName === "IMG") {
+					var catentryid = $(e.target).parents("li").attr("data-catentryid");
+					console.log(e.type + ": " + catentryid);
 				}
-			}
-			
-			if(event.type === "touchstart") {
-				alert("touchstart");
-			}
-			
-			if(carouselRotating) {
-				stopCarousel();
 			}
 		});
 	}
 	
-	return new FeaturedTitleView;
+	return new FeaturedTitleView();
 })();
