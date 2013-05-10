@@ -47,7 +47,7 @@
 
 @import "common";
 
-.mdmc-carousel {
+.mdmc-featured-title.mdmc-carousel {
 	ul[data-orbit] {
 
 		li {
@@ -66,6 +66,7 @@
 	
 	.orbit-bullets {
 		display: table;
+		margin: 0 auto 15px auto;
 		
 		li {
 			width: 8px;
@@ -78,65 +79,74 @@
 	}
 }
 
-.mdmc-scroller, .mdmc-promos {
+.mdmc-featured-title.mdmc-slider, .mdmc-featured-title.mdmc-promos {
 	padding-left: 15px;
-	
-	font: {
-		family: nunito, verdana, sans-serif;
-		size: 0.5em;
-		style: normal;
-		weight: bold;
-	}
 		
+	font: {
+		family: Nunito, verdana, sans-serif;
+		weight: 500;
+		style: normal;
+	}
+	
 	h2 {
 		display: inline-block;
 		margin-right: 10px;
+		font-size: 0.85em;
 		color: #000;
 	}
 	
 	a {
 		text-transform: uppercase;
-		font-size: 1.2em;
+		font-size: 0.5em;
 		color: blue;
 		
 		span {
 			color: red;
 		}
 	}
+	
+	header {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
 }
 
-.mdmc-promos img {
-	width: 45%;
+.mdmc-featured-title.mdmc-promos img {
+	width: 48%;
+	cursor: pointer;
 }
 
-.container {
-	position: relative;
-	width: 100%; // EDK 900px;
-	height: 160px;
-	margin: 0 auto;
-	overflow: visible;
-}
-
-.iosSlider {
-	width: 100%;
-	height: 100%; // EDK 300px;
-}
-
-.iosSlider .slider {
-	width: 100%;
-	height: 100%;
-}
-
-.iosSlider .slider .item {
-	float: left;
-	width: 40%; // EDK 50%;
-}
-
-.iosSlider .slider .item img {
-	width: 100%;
-	height: auto;
-}
-
-.container .unselectable {
-	opacity: 0.2;
+.mdmc-featured-title.mdmc-slider {
+	section {
+		position: relative;
+		width: auto;
+		height: 155px;
+		margin: 0 auto;
+		overflow: visible;
+		
+		.unselectable {
+			opacity: 0.2;
+		}
+		
+		.mdmc-slider-container {
+			width: auto;
+			height: 100%;
+			
+			.slider {
+				width: 100%;
+				height: 100%;
+				
+				.item {
+					float: left;
+					width: 40%;
+					
+					img {
+						width: 100%;
+						height: 100%;
+						padding-right: 5%;
+					}
+				}
+			}
+		}
+	}
 }

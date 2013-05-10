@@ -293,79 +293,73 @@
 				</ul>
 			</article>
 	
-			<article class="mdmc-scroller">
+			<article class="mdmc-featured-title mdmc-slider">
 				<header>
 					<h2>Recent Blu-Ray Releases</h2>
 					<a href="#">See all <span>&gt;</span></a>
 				</header>
 				
-				<div class="container">
-					<div class="iosSlider">
+				<section>
+					<div class="mdmc-slider-container">
 						<div class="slider">
-							<div class="item">
+							<div class="item" data-catentryid="11111">
 								<img src="img/wrect-it.png" />
 							</div>
-							<div class="item">
+							<div class="item" data-catentryid="22222">
 								<img src="img/chimpanzee.png" />
 							</div>
-							<div class="item">
+							<div class="item" data-catentryid="33333">
 								<img src="img/wrect-it.png" />
 							</div>
-							<div class="item">
+							<div class="item" data-catentryid="44444">
 								<img src="img/chimpanzee.png" />
 							</div>
-							<div class="item">
+							<div class="item" data-catentryid="55555">
 								<img src="img/wrect-it.png" />
-							</div>
-							<div class="item">
-								<img src="img/chimpanzee.png" />
 							</div>
 						</div>
 					</div>	
-				</div>
+				</section>
 			</article>
 			
-			<article class="mdmc-promos">
+			<article class="mdmc-featured-title mdmc-promos">
 				<header>
 					<h2>Promos</h2>
 				</header>
 				
 				<section>
-					<img src="img/brother-bear.png" />
 					<img src="img/dvd-sale.png" />
+					<img src="img/brother-bear.png" />
 				</section>
 			</article>
-			
-			<article class="mdmc-scroller">
+
+			<article class="mdmc-featured-title mdmc-slider">
 				<header>
-					<h2>Recent Grown Up Hits</h2>
+					<h2>Grown-Up Hits</h2>
 					<a href="#">See all <span>&gt;</span></a>
 				</header>
 				
-				<div class="container">
-					<div class="iosSlider">
+				<section>
+					<div class="mdmc-slider-container">
 						<div class="slider">
-							<div class="item">
+							<div class="item" data-catentryid="66666">
 								<img src="img/wrect-it.png" />
 							</div>
-							<div class="item">
+							<div class="item" data-catentryid="77777">
 								<img src="img/chimpanzee.png" />
 							</div>
-							<div class="item">
+							<div class="item" data-catentryid="88888">
 								<img src="img/wrect-it.png" />
 							</div>
-							<div class="item">
+							<div class="item" data-catentryid="99999">
 								<img src="img/chimpanzee.png" />
 							</div>
-							<div class="item">
+							<div class="item" data-catentryid="00000">
 								<img src="img/wrect-it.png" />
-							</div>
-							<div class="item">
-								<img src="img/chimpanzee.png" />
 							</div>
 						</div>
 					</div>	
-				</div>
+				</section>
 			</article>
 		</section>
 	</section>
@@ -395,42 +389,8 @@
 			}
 		});
 		
-		function sliderTest(args) {
-			try {
-				console.log(args);
-			} catch(err) {
-			}
-		}
-		
-		function slideComplete(args) {
-		
-			$('.next, .prev').removeClass('unselectable');
-			
-		    if(args.currentSlideNumber == 1) {
-		
-		        $('.prev').addClass('unselectable');
-		
-		    } else if(args.currentSliderOffset == args.data.sliderMax) {
-		
-		        $('.next').addClass('unselectable');
-		
-		    }
-		
-		}
-		
 		$(document).ready(function() {
 			featuredTitleView.init();
-			
-			$(".iosSlider").iosSlider({
-				snapToChildren: true,
-				desktopClickDrag: true,
-				keyboardControls: true,
-				//onSliderLoaded: sliderTest,
-				//onSlideStart: sliderTest,
-				//onSlideComplete: slideComplete,
-				//navNextSelector: $('.next'),
-			    //navPrevSelector: $('.prev'),
-			});
 		});
 	</script>
 </body>
