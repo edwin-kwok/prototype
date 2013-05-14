@@ -37,11 +37,10 @@ body {
 
 // this is to move the default menu position from right to left
 .top-bar .toggle-topbar.menu-icon {
-	left: 15px;
+	left: 0;
 	top: 50%;
 	margin-top: -16px;
-	padding-left: 30px;
-	padding-right: 40px;
+	padding-left: 0;
 }
 
 // move the search and shopping cart icons to the right
@@ -51,9 +50,4 @@ body {
 	top: 50%;
 	margin-top: -16px;
 	padding-left: 40px;
-}
-
-// ORBIT
-.orbit-prev, .orbit-next, .orbit-slide-number, .orbit-timer {
-	visibility: hidden;
 }

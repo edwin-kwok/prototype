@@ -48,33 +48,69 @@
 @import "common";
 
 .mdmc-featured-title.mdmc-carousel {
-	ul[data-orbit] {
+	section {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding: 0 0 50% 0;
 
-		li {
-			//width: auto;
+		.mdmc-slider-container {
+			width: 100%;
+			height: 1000px;
 			
-			div {
-				//width: 100%;
+			.slider {
+				width: 100%;
+				height: 100%;
 				
-				img {
+				.item {
+					float: left;
 					width: 100%;
-					margin: 0 auto;
+					
+					img {
+						width: 100%;
+						height: auto;
+					}
 				}
 			}
-		}
-	}
-	
-	.orbit-bullets {
-		display: table;
-		margin: 0 auto 15px auto;
-		
-		li {
-			width: 8px;
-			height: 8px;
-			border: solid 1px #ccc;
-			box-shadow: #999 0 0.2em 0.4em inset;
-			//box-shadow: #303335 0 0.2em 0.4em inset;
-			background: #fff;//linear-gradient(to bottom, #339ad9 0%,#224bbc 100%);
+			
+			.selectors-block {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 5%;
+				
+				.selectors {
+					position: relative;
+					top: 0;
+					left: 0;
+					margin: 0 auto;
+					width: 12%;
+					height: 100%;
+					
+					.item {
+						position: relative;
+						top: 0;
+						left: 0;
+						float: left;
+						width: 16%;
+						height: 80%;
+						margin: 0 0 0 5%;
+						background: #aaa;
+						border: solid 1px #ccc;
+						border-radius: 50%;
+						//box-shadow: #999 0 0.2em 0.4em inset;
+						//linear-gradient(to bottom, #339ad9 0%,#224bbc 100%);
+					}
+					
+					.selected {
+						background: #333;
+					}
+					
+					.first {
+						margin-left: 0;
+					}
+				}
+			}
 		}
 	}
 }
@@ -108,29 +144,20 @@
 	header {
 		margin-top: 5px;
 		margin-bottom: 5px;
+		clear: both;
 	}
-}
-
-.mdmc-featured-title.mdmc-promos img {
-	width: 48%;
-	cursor: pointer;
 }
 
 .mdmc-featured-title.mdmc-slider {
 	section {
 		position: relative;
-		width: auto;
-		height: 155px;
-		margin: 0 auto;
-		overflow: visible;
-		
-		.unselectable {
-			opacity: 0.2;
-		}
-		
+		width: 100%;
+		height: 0;
+		padding: 0 0 46% 0;
+
 		.mdmc-slider-container {
-			width: auto;
-			height: 100%;
+			width: 100%;
+			height: 1000px;
 			
 			.slider {
 				width: 100%;
@@ -150,3 +177,28 @@
 		}
 	}
 }
+
+.mdmc-featured-title.mdmc-promos {
+	padding-right: 15px;
+	
+	.item {
+		width: 50%;
+		cursor: pointer;
+		float: left;
+		
+		img {
+			width: 100%;
+		}
+	}
+}
+
+/*
+.top-bar-section ul {
+ 	width: 50% !important;
+ }
+ 
+ .top-bar-section .dropdown {
+	width: 50% !important;
+	height: auto !important;
+ }
+ */

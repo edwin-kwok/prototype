@@ -636,10 +636,6 @@ $em-base: 16px !default;
 
 // We use these to control the caption styles
 // $orbit-container-bg: #f5f5f5;
-
-// EDK: Changed background color to white
-$orbit-container-bg: #fff;
-
 // $orbit-caption-bg-old-browser: #000;
 // $orbit-caption-bg-old: rgb(0,0,0);
 // $orbit-caption-bg: rgba(0,0,0,0.6);
@@ -1038,8 +1034,4 @@ $orbit-container-bg: #fff;
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
 // $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
-
-// EDK: Changed this always show
-$topbar-breakpoint: emCalc(9999px);
-
 // $topbar-media-query: "only screen and (min-width: "#{$topbar-breakpoint}")";
