@@ -5,14 +5,13 @@
 var featuredTitleView = (function() {
 	"use strict";
 	
-	var dataTimer = 0,
-		dataBullets = false,
-		$topbarCtn = $(".mdmc-header .contain-to-grid.sticky"),
+	var $topbarCtn = $(".mdmc-header .contain-to-grid.sticky"),
 		$carouselCtn = $(".mdmc-featured-title.mdmc-carousel .mdmc-slider-container"),
 		$carousel = $carouselCtn.children(".slider"),
 		$sliderCtn = $(".mdmc-featured-title.mdmc-slider .mdmc-slider-container"),
 		$slider = $sliderCtn.children(".slider"),
 		$promos = $(".mdmc-featured-title.mdmc-promos section"),
+		carouselTimer = 0,
 		
 		onSlideItemChange = function(args) {
 			$(".selectors .item").removeClass("selected");
@@ -20,6 +19,14 @@ var featuredTitleView = (function() {
 		};
 	
 	var FeaturedTitleView = function() {
+		var carouselBullets = $carouselCtn.attr("data-bullets") || false;
+		
+		carouselTimer = parseInt($carouselCtn.attr("data-timer") || 0);
+
+		if(!carouselBullets) {
+			// need to hide .selectors-block and adjust carousel and selector block scaling
+		}
+		
 		if($topbarCtn.length > 0) {
 			$topbarCtn.foundation("topbar", function(response) {
 				if(response.errors.length !== 0) {
@@ -30,9 +37,6 @@ var featuredTitleView = (function() {
 		else {
 			console.log("FeaturedTitleView: Cannot find $topbarCtn!");
 		}
-		
-		dataTimer = parseInt($carouselCtn.attr("data-timer") || 0);
-		dataBullets = $carouselCtn.attr("data-bullets") || false;
 	}
 	
 	FeaturedTitleView.prototype.init = function() {
@@ -42,8 +46,8 @@ var featuredTitleView = (function() {
 			navSlideSelector: $(".selectors .item"),
 			onSlideChange: onSlideItemChange,
 			infiniteSlider: true,
-			autoSlide: dataTimer > 0,
-			autoSlideTimer: (dataTimer > 0)? dataTimer: 0
+			autoSlide: carouselTimer > 0,
+			autoSlideTimer: (carouselTimer > 0)? carouselTimer: 0
 		});
 		
 		$sliderCtn.iosSlider({
