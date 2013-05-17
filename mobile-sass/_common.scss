@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-body { 
-	padding-top: 0 !important;
-}
-
 // each will be a row on the grid
 .mdmc-header, .mdmc-body, .mdmc-footer {
 	@extend .row;
@@ -18,18 +14,7 @@ body {
 	}
 }
 
-.mdmc-header {
-	margin-bottom: $topbar-height;
-}
-
 // TOPBAR
-// fix topbar, when activated, pushes page content down issue
-.mdmc-header .contain-to-grid.sticky {
-	height: $topbar-height;
-	position: fixed;
-	z-index: 1000;
-}
-
 // this selector is required for topbar to work properly
 .name h1 {
 	display: none;

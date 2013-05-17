@@ -5,7 +5,7 @@
 var featuredTitleView = (function() {
 	"use strict";
 	
-	var $topbarCtn = $(".mdmc-header .contain-to-grid.sticky"),
+	var $topbarCtn = $(".mdmc-header>section"),
 		$carouselCtn = $(".mdmc-featured-title.mdmc-carousel .mdmc-slider-container"),
 		$carousel = $carouselCtn.children(".slider"),
 		$sliderCtn = $(".mdmc-featured-title.mdmc-slider .mdmc-slider-container"),
@@ -45,7 +45,7 @@ var featuredTitleView = (function() {
 			desktopClickDrag: true,
 			navSlideSelector: $(".selectors .item"),
 			onSlideChange: onSlideItemChange,
-			infiniteSlider: true,
+			infiniteSlider: carouselTimer > 0,
 			autoSlide: carouselTimer > 0,
 			autoSlideTimer: (carouselTimer > 0)? carouselTimer: 0
 		});
@@ -56,7 +56,7 @@ var featuredTitleView = (function() {
 		});
 
 		$carousel.add($slider).add($promos).on("click", "div, div>img", function(e) {
-			//e.stopPropagation();
+			e.stopPropagation();
 			
 			if(e.type === "click") {
 				if(e.currentTarget.nodeName === "IMG") {
