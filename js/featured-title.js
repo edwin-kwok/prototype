@@ -11,7 +11,7 @@ var featuredTitleView = (function() {
 		$sliderCtn = $(".mdmc-featured-title.mdmc-slider .mdmc-slider-container"),
 		$slider = $sliderCtn.children(".slider"),
 		$promos = $(".mdmc-featured-title.mdmc-promos section"),
-		carouselTimer = 0,
+		carouselTimer = parseInt($carouselCtn.attr("data-timer") || 0),
 		
 		onSlideItemChange = function(args) {
 			$(".selectors .item").removeClass("selected");
@@ -19,12 +19,11 @@ var featuredTitleView = (function() {
 		};
 	
 	var FeaturedTitleView = function() {
-		var carouselBullets = $carouselCtn.attr("data-bullets") || false;
+		var displayBullets = $carouselCtn.attr("data-bullets") || "false";
 		
-		carouselTimer = parseInt($carouselCtn.attr("data-timer") || 0);
-
-		if(!carouselBullets) {
-			// need to hide .selectors-block and adjust carousel and selector block scaling
+		if(displayBullets === "false") {
+			$carouselCtn.children(".selectors-block").hide();
+			$carouselCtn.parent().css("padding", "0 0 45% 0");
 		}
 		
 		if($topbarCtn.length > 0) {

@@ -98,6 +98,8 @@
 						background: #aaa;
 						border: solid 1px #ccc;
 						border-radius: 50%;
+						-moz-border-radius: 50%;
+						-webkit-border-radius: 50%;
 						//box-shadow: #999 0 0.2em 0.4em inset;
 						//linear-gradient(to bottom, #339ad9 0%,#224bbc 100%);
 					}
