@@ -31,6 +31,37 @@
 	        box-shadow: 0 2px 0 0 #b25a00;
 }
 
+.rounded-corners {
+	@include radius(10px);
+	
+	border: 1px solid #5ba1d0;
+	
+	padding: 0;
+
+	-webkit-box-shadow: 0 2px 0 0 #000;
+	   -moz-box-shadow: 0 2px 0 0 #000;
+	        box-shadow: 0 2px 0 0 #000;
+	        
+	        
+/*
+	li {
+		padding:@input-vpadding @input-hpadding;
+
+		&:not(.placeholder) {
+			color:#333;
+		}
+
+		&:not(:first-child) {
+			border-top: 1px solid #c9c3bd;
+		}
+	}
+
+	&, input, select {
+		background-color: #e5e3df;
+	}
+	*/
+}
+
 // TOPBAR
 .mdmc-header .top-bar {
 	background-image: url(../mobile-img/header-bg@2x.png);
