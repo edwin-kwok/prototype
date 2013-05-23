@@ -94,6 +94,21 @@ body {
 	}
 }
 
+.mdmc-body .message {
+	@extend .row;
+	
+	height: auto;
+	
+	p {
+		@extend .small-11, .small-centered, .columns;
+		
+		width: 300px;
+		margin: 0 auto;
+		text-align: center;
+		color: #fff;
+	}
+}
+
 .mdmc-body .credentials {
 	@extend .row;
 	
