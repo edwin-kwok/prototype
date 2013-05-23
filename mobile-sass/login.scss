@@ -82,26 +82,41 @@ body {
 	
 	border: 0;
 	
-	div {
+	&>div {
 		@extend .small-11, .small-centered, .columns;
 		
 		padding: 0;
 		
-		input {
-			display: block;
+		div {
+			width: 248px;
 			
 			margin: 0 auto;
-			min-width: 248px;
-			
-			&:not([type=submit]) {
-				padding-left: 10px;
-				padding-right: 10px;
+		
+			input {
+				display: block;
+				border: 0;
+				width: 238px;
+				margin-left: 5px;
 				
-				height: 52px;
-			}
+				&:not(:first-child) {
+					border-top: 1px solid #999;
+				}
 			
-			&[type=submit] {
-				height: 53px;
+				&:not([type=submit]) {
+					background-color: #f7f7f7;
+					height: 52px;
+				}
+				
+				&[type=submit] {
+					margin-top: 10px;
+					margin-left: 0;
+					height: 53px;
+					width: 248px;
+				}
+				
+				&:focus {
+					outline: none;
+				}
 			}
 		}
 	}
