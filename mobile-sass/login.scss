@@ -47,6 +47,23 @@
 
 @import "common";
 
+.rounded-corners {
+	@include radius(10px);
+	
+	border: 1px solid #5ba1d0;
+	background-color: #f7f7f7;
+	padding: 0;
+
+	-webkit-box-shadow: 0 2px 1px -1px #999;
+	   -moz-box-shadow: 0 2px 1px -1px #999;
+	        box-shadow: 0 2px 1px -1px #999;
+	        
+	&.error {
+		border: 1px solid red;
+	}
+	
+}
+
 body {
 	background-image: url(../mobile-img/login-bg@2x.png);
 	background-size: 100% 568px;
@@ -58,7 +75,7 @@ body {
 .mdmc-header {
 	section {
 		padding-top: 55px;
-		padding-bottom: 10px;
+		padding-bottom: 5px;
 		
 		.dmc-logo {
 			background-image: url(../mobile-img/dmc-logo-lg@2x.png);
@@ -95,29 +112,50 @@ body {
 			input {
 				display: block;
 				border: 0;
-				width: 238px;
-				margin-left: 5px;
+				width: 100%;
 				
 				&:not(:first-child) {
-					border-top: 1px solid #999;
+					border-top: 1px solid #e3e3e3;
 				}
 			
-				&:not([type=submit]) {
-					background-color: #f7f7f7;
+				&[type=text],
+				&[type=password] {
+					background-color: transparent;
+					padding-left: 10px;
+					padding-right: 10px;
 					height: 52px;
 				}
 				
-				&[type=submit] {
-					margin-top: 10px;
-					margin-left: 0;
+				&[type=submit],
+				&[type=button] {
+					margin-top: 15px;
 					height: 53px;
-					width: 248px;
 				}
 				
 				&:focus {
 					outline: none;
 				}
 			}
+			
+			a,
+			span {
+				font-size: 10px;
+				font-weight: bold;
+				color: #333;
+			}
+			
+			a:hover {
+				text-decoration: underline;
+			}
+			
+			span {
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+		}
+		
+		hr {
+			border: px solid #333;
 		}
 	}
 }
