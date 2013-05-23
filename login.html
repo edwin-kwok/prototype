@@ -1,15 +1,15 @@
 <!DOCTYPE html>
+
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
-
 <head>
 	<meta charset="utf-8" />
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="format-detection" content="telephone=no" />
 
-	<title>Disney Movie Club - Please Sign-In</title>
-	
+	<title>Disney Movie Club - Please Login</title>
+
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/login.css" />
 
@@ -17,115 +17,76 @@
 </head>
 <body>
 	<!-- HEADER SECTION STARTS HERE -->
-	<header>
-		<h1>Disney Movie Club</h1>
-
-		<section class="header-primary">
-			<div>
-				<a class="sign-in-button" href="#">
-					<div class="lock-icon"></div>
-					<span>Sign In</span>
-				</a>
-			</div>
-
-			<div>
-				<img class="disney-logo" src="img/dmc-logo.png" />
-			</div>
-
-			<div>
-				<a class="shopping-cart-button" href="#">
-					<div class="cart-icon"></div>
-					<span>0 items</span>
-				</a>
-			</div>
-		</section>
-
-		<section class="header-secondary">
-			<div>
-				<a class="search-button" href="#">
-					<div class="search-icon"></div>
-					<span>Search for Movies</span>
-				</a>
-			</div>
+	<header class="mdmc-header">
+		<section>
+			<h1 class="dmc-logo">
+				<a href="#" title="Disney Movie Club"><span>Disney Movie Club</span></a>
+			</h1>
 		</section>
 	</header>
-
+	
 	<!-- MAIN CONTENT STARTS HERE -->
-	<section class="main-content">
-		<form method="POST" action="#">
-			<input type="hidden" name="langId" value="-1"> 
-			<input type="hidden" name="storeId" value="10001">
-			<input type="hidden" name="login" value="Login">
-			<input type="hidden" name="cycleId" value="">
-			<input type="hidden" name="offerId" value="">
-			<input type="hidden" name="logonCreateURL" value="DMCLoginCreateMemberView">
-			<input type="hidden" name="twoPack" value="">
-			<input type="hidden" name="langId" value="-1">
-			<input type="hidden" name="storeId" value="10001">
-			<input type="hidden" name="catalogId" value="10051">
-			<input type="hidden" name="catalogId" value="10051"> 
-			<input type="hidden" name="logonReturnMember" value="">
-			<input type="hidden" name="logonReLogonURL" value="DMCLoginView">
-			<input type="hidden" name="logonURL" value="">
-
-			<fieldset>
-				<legend>Member Login</legend>
-
-				<div class="row">
-					<div class="small-12 columns">
-						<input type="text" placeholder="E-mail address">
+	<section class="mdmc-body">
+		<section class="message">
+			<p>
+				Invalid userid!<br>
+				Invalid password!
+			</p>
+		</section>
+		
+		<section class="login">
+			<form method="POST" action="#">
+				<!-- this is copied from existing login JSP -->
+				<input type="hidden" name="langId" value="-1"> 
+				<input type="hidden" name="storeId" value="10001">
+				<input type="hidden" name="login" value="Login">
+				<input type="hidden" name="cycleId" value="">
+				<input type="hidden" name="offerId" value="">
+				<input type="hidden" name="logonCreateURL" value="DMCLoginCreateMemberView">
+				<input type="hidden" name="twoPack" value="">
+				<input type="hidden" name="langId" value="-1">
+				<input type="hidden" name="storeId" value="10001">
+				<input type="hidden" name="catalogId" value="10051">
+				<input type="hidden" name="catalogId" value="10051"> 
+				<input type="hidden" name="logonReturnMember" value="">
+				<input type="hidden" name="logonReLogonURL" value="DMCLoginView">
+				<input type="hidden" name="logonURL" value="">
+				
+				<fieldset class="credentials">
+					<div>
+						<div class="rounded-corner">
+							<input type="text" placeholder="E-mail address">
+							<input type="password" placeholder="Password">
+						</div>
+						
+						<div>
+							<input class="login-button upper-case" type="submit" value="Login">
+							<a href="#">Forgot Password?</a> | &nbsp;
+							<a href="#">Don't Have an Account?</a>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="small-12 columns">
-						<input type="password" placeholder="Password">
-					</div>
-				</div>
-				<div class="row">
-					<div class="small-12 columns">
-						<input type="submit">
-					</div>
-				</div>
-			</fieldset>
-		</form>
+				</fieldset>
+			</form>
+		</section>
 	</section>
 
 	<!-- FOOTER SECTION STARTS HERE -->
-	<footer>
+	<!-- we do not need a footer for the login page
+	<footer class="mdmc-footer">
 		<section>
-			<div>
-				<dl class="footer-links">
-					<dt>Links:</dt>
-					<dd><a href="https://disneymovieclub.go.com"> Main Site |</a></dd>
-					<dd><a class="active" href="#"> Mobile Site |</a></dd>
-					<dd><a href="#"> Profile</a></dd>
-				</dl>
-				<p><small>&copy;Disney. All rights reserved.</small></p>
-			</div>
 		</section>
 	</footer>
+	-->
 
-	<script>
-		document.write('<script src=' + ('__proto__' in {}? 'js/vendor/zepto': 'js/vendor/jquery') + '.js><\/script>');
-	</script>
-  
+	<script src="js/vendor/jquery-1.9.1.min.js"></script>
+
 	<script src="js/foundation/foundation.js"></script>
-	<script src="js/foundation/foundation.alerts.js"></script>
-	<script src="js/foundation/foundation.clearing.js"></script>
-	<script src="js/foundation/foundation.cookie.js"></script>
-	<script src="js/foundation/foundation.dropdown.js"></script>
-	<script src="js/foundation/foundation.forms.js"></script>
-	<script src="js/foundation/foundation.joyride.js"></script>
-	<script src="js/foundation/foundation.magellan.js"></script>
-	<script src="js/foundation/foundation.orbit.js"></script>
-	<script src="js/foundation/foundation.placeholder.js"></script>
-	<script src="js/foundation/foundation.reveal.js"></script>
-	<script src="js/foundation/foundation.section.js"></script>
-	<script src="js/foundation/foundation.tooltips.js"></script>
-	<script src="js/foundation/foundation.topbar.js"></script>
+<!-- 	<script src="js/featured-title.js"></script> -->
   
 	<script>
-		$(document).foundation();
+		$(document).ready(function() {
+			//featuredTitleView.init();
+		});
 	</script>
 </body>
 </html>

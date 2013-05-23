@@ -14,7 +14,31 @@
 	}
 }
 
+.upper-case {
+	text-transform: uppercase;
+}
+
+.login-button {
+	@include button-base;
+	@include button-style(#f27303, true, false);
+	@include radius(10px);
+	@include single-transition;
+	
+	color: #fff;
+	
+	-webkit-box-shadow: 0 2px 0 0 #b25a00;
+	   -moz-box-shadow: 0 2px 0 0 #b25a00;
+	        box-shadow: 0 2px 0 0 #b25a00;
+}
+
 // TOPBAR
+.mdmc-header .top-bar {
+	background-image: url(../mobile-img/header-bg@2x.png);
+	background-size: 60px $topbar-height;
+	background-repeat: repeat-x;
+	width: 100%;
+}
+
 // this selector is required for topbar to work properly
 .name h1 {
 	display: none;
@@ -26,6 +50,7 @@
 	top: 50%;
 	margin-top: -16px;
 	padding-left: 0;
+	width: 50px; //EDK
 }
 
 // move the search and shopping cart icons to the right

@@ -1,5 +1,11 @@
 /**
  * View logic for featured title page.
+ * 
+ * The following plugin is used to display the 2.5 sliders on the page:
+ * http://iosscripts.com/iosslider/
+ * 
+ * To reduce weight of application, we no longer use the orbit plugin supplied by Zurb Foundation.
+ * 
  */
 
 var featuredTitleView = (function() {
