@@ -47,23 +47,6 @@
 
 @import "common";
 
-.rounded-corners {
-	@include radius(10px);
-	
-	border: 1px solid #5ba1d0;
-	background-color: #f7f7f7;
-	padding: 0;
-
-	-webkit-box-shadow: 0 2px 1px -1px #999;
-	   -moz-box-shadow: 0 2px 1px -1px #999;
-	        box-shadow: 0 2px 1px -1px #999;
-	        
-	&.error {
-		border: 1px solid red;
-	}
-	
-}
-
 body {
 	background-image: url(../mobile-img/login-bg@2x.png);
 	background-size: 100% 568px;

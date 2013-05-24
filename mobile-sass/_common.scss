@@ -18,6 +18,22 @@
 	text-transform: uppercase;
 }
 
+.rounded-corners {
+	@include radius(10px);
+	
+	border: 1px solid #5ba1d0;
+	background-color: #f7f7f7;
+	padding: 0;
+
+	-webkit-box-shadow: 0 2px 1px -1px #999;
+	   -moz-box-shadow: 0 2px 1px -1px #999;
+	        box-shadow: 0 2px 1px -1px #999;
+	        
+	&.error {
+		border: 1px solid red;
+	}
+}
+
 .login-button {
 	@include button-base;
 	@include button-style(#f27303, true, false);
