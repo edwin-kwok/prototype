@@ -10,12 +10,13 @@
 
 	<title>Disney Movie Club - Please Login</title>
 
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu">
 	<link rel="stylesheet" href="css/normalize.css" />
 	<link rel="stylesheet" href="css/login.css" />
 
 	<script src="js/vendor/custom.modernizr.js"></script>
 </head>
-<body>
+<body class="cloud">
 	<!-- HEADER SECTION STARTS HERE -->
 	<header class="mdmc-header">
 		<section>
@@ -28,8 +29,14 @@
 	<!-- MAIN CONTENT STARTS HERE -->
 	<section class="mdmc-body">
 		<section>
-			<section class="message">
-				<p>There was a problem with your E-mail address or Password.  Please check them and try again.</p>
+<!-- UNCOMMENT THIS FOR LOGIN ERROR MESSAGE -->
+			<section class="error-message">
+				<div>
+					<div class="error-rounded-corner">
+						<p>There was a problem with your E-mail address or Password.</p>
+						<p>Please check them and try again.</p>
+					</div>
+				</div>
 			</section>
 			
 			<form method="POST" action="#">
@@ -49,26 +56,31 @@
 				<input type="hidden" name="logonReLogonURL" value="DMCLoginView">
 				<input type="hidden" name="logonURL" value="">
 				
-				<fieldset class="credentials">
+				<fieldset class="input-fields">
 					<div>
-						<!-- to toggle error condition, add error class as below:
-						<div class="rounded-corners error">
-						-->
-						<div class="rounded-corners">
-							<input type="text" placeholder="E-mail address" autocorrect="off" required>
+						<div class="container rounded-corners">
+							<input type="text" placeholder="E-mail Address" autocorrect="off" required>
 							<input type="password" placeholder="Password" autocorrect="off" required>
 						</div>
 						
-						<div>
-							<input class="login-button upper-case" type="submit" value="Login">
-							<a href="#">Forgot Password?</a><span>|</span><a href="#">Don't Have an Account?</a>
+						<div class="container">
+							<input class="cta-button primary large upper-case" type="submit" value="Login">
+							<div>
+								<a href="#">Forgot Password?</a>&nbsp;<a href="#">Don't Have an Account?</a>
+							</div>
 						</div>
 						
-						<hr/>
+						<div class="container">
+							<div>
+								<div class="line"></div><span class="upper-case">Or</span><div class="line"></div>
+							</div>
+						</div>
 						
-						<div>
-							<input class="login-button" type="button" value="Join Now &amp; Start Saving!">
-							<a href="#">Member new to the site?</a><span>|</span><a href="#">Register here</a>
+						<div class="container">
+							<input class="cta-button tertiary large" type="button" value="Join Now &amp; Start Saving!">
+							<div>
+								<a href="#">Member new to the site?</a>&nbsp;<a href="#">Register here.</a>
+							</div>
 						</div>						
 					</div>
 				</fieldset>
