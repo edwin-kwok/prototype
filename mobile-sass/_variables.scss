@@ -27,9 +27,9 @@ $em-base: 16px !default;
 
 // $body-bg: #fff;
 // $body-font-color: #222;
-$body-font-family: Ubuntu, serif; // EDK: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$body-font-weight: normal; // EDK
-$body-font-style: normal; // EDK
+// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-weight: normal;
+// $body-font-style: normal;
 
 // Font-smoothing
 
@@ -318,15 +318,15 @@ $body-font-style: normal; // EDK
 
 // Button text styles.
 
-$button-font-family: Nunito, sans-serif; // EDK: inherit;
-$button-font-color: #fff; // EDK
+// $button-font-family: inherit;
+// $button-font-color: #fff;
 // $button-font-color-alt: #333;
 // $button-font-med: emCalc(16px);
 // $button-font-tny: emCalc(11px);
 // $button-font-sml: emCalc(13px);
 // $button-font-lrg: emCalc(20px);
-$button-font-weight: bold; // EDK
-$button-font-align: center; // EDK
+// $button-font-weight: bold;
+// $button-font-align: center;
 
 // Various hover effects.
 
@@ -1167,6 +1167,7 @@ $button-font-align: center; // EDK
 // Background color for the top bar
 
 // $topbar-bg:                            #111 !default;
+
 // EDK
 $topbar-bg: #1d82d4;
 
@@ -1174,9 +1175,11 @@ $topbar-bg: #1d82d4;
 
 // $topbar-height:                        45px;
 // $topbar-margin-bottom:                 emCalc(30px);
+
 // EDK
 $topbar-height: 58px;
 $topbar-margin-bottom: 0;
+
 // Control Input height for top bar
 
 // $topbar-input-height:                  2.45em;

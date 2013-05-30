@@ -47,7 +47,7 @@
 
 @import "common";
 
-body.cloud {
+body {
 	background-image: url(../mobile-img/login-bg@2x.png);
 	background-size: 100% 568px;
 	background-repeat: no-repeat;
@@ -57,7 +57,7 @@ body.cloud {
 
 .mdmc-header {
 	section {
-		padding-top: 30px;
+		padding-top: 55px;
 		padding-bottom: 5px;
 		
 		.dmc-logo {
@@ -77,104 +77,84 @@ body.cloud {
 	}
 }
 
-.mdmc-body .error-message {
+.mdmc-body .message {
 	@extend .row;
 	
 	height: auto;
 	
-	&>div {
+	p {
 		@extend .small-11, .small-centered, .columns;
 		
-		.error-rounded-corner {
-			@include radius(10px);
-	
-			width: 248px;
-			margin: 0 auto;
-			margin-top: 5px;
-			padding: 5px;
-			
-			border: 1px solid #b73434;
-			background-color: #d56868;
-	
-			p {
-				margin: 0 auto;
-				text-align: center;
-				color: #fff;
-				
-				font-size: emCalc(12px);
-				line-height: emCalc(18px);
-			}
-		}
+		width: 300px;
+		margin: 0 auto;
+		text-align: center;
+		color: #fff;
 	}
 }
 
-.mdmc-body .input-fields {
+.mdmc-body .credentials {
 	@extend .row;
 	
-	height: auto;
 	border: 0;
 	
-	padding-top: 0;
-	padding-bottom: 0;
-	
 	&>div {
 		@extend .small-11, .small-centered, .columns;
-			
-		.container {
+		
+		padding: 0;
+		
+		div {
 			width: 248px;
+			
 			margin: 0 auto;
-			
-			.cta-button.primary {
-				margin-top: 20px;
-			}
-			
-			.cta-button.tertiary {
-				margin-top: 10px;
-			}
-				
-			&>div {
+		
+			input {
+				display: block;
+				border: 0;
 				width: 100%;
-				margin-top: 10px;
 				
-				text-align: center;
-
-				font-size: emCalc(12px);
-				font-weight: normal;
-					
-				a {
-					display: inline;
-					width: auto;
-					
-					color: #4898d4;
+				&:not(:first-child) {
+					border-top: 1px solid #e3e3e3;
+				}
+			
+				&[type=text],
+				&[type=password] {
+					background-color: transparent;
+					padding-left: 10px;
+					padding-right: 10px;
+					height: 52px;
 				}
 				
-				a:hover {
-					text-decoration: none;
+				&[type=submit],
+				&[type=button] {
+					margin-top: 15px;
+					height: 53px;
 				}
 				
-				div.line {
-					width: 44%;
-			        overflow: visible;
-					float: left;
-			        border-bottom: 1px #4898d4 solid;
-			        height: 6px;        
-			        margin: 0;
-			        padding: 0;
+				&:focus {
+					outline: none;
 				}
-				
-				span {
-					width: 12%;
-					overflow: visible;
-					float: left;
-					color: #4898d4;				
-					margin: 0;
-					padding: 0;
-				}
+			}
+			
+			a,
+			span {
+				font-size: 10px;
+				font-weight: bold;
+				color: #333;
+			}
+			
+			a:hover {
+				text-decoration: underline;
+			}
+			
+			span {
+				padding-left: 5px;
+				padding-right: 5px;
 			}
 		}
 		
-		.rounded-corners {
-			margin-top: 5px;
+		hr {
+			border: px solid #333;
 		}
 	}
 }
+

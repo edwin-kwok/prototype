@@ -1,15 +1,7 @@
 @charset "UTF-8";
 
-@mixin mdmc-box-shadow($horizontal-offset, $vertical-offset, $blur-radius, $spread-radius, $color, $inset: "") {
-	-moz-box-shadow: $horizontal-offset $vertical-offset $blur-radius $spread-radius $color #{$inset};
-	-webkit-box-shadow: $horizontal-offset $vertical-offset $blur-radius $spread-radius $color #{$inset};
-	box-shadow: $horizontal-offset $vertical-offset $blur-radius $spread-radius $color #{$inset};
-}
-
-// each will be a row in the grid
-.mdmc-header,
-.mdmc-body,
-.mdmc-footer {
+// each will be a row on the grid
+.mdmc-header, .mdmc-body, .mdmc-footer {
 	@extend .row;
 	
 	max-width: 100%;
@@ -22,127 +14,37 @@
 	}
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-	color: #d1d1d1;
-}
-
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-	color: #d1d1d1;
-}
-
 .upper-case {
 	text-transform: uppercase;
 }
 
 .rounded-corners {
 	@include radius(10px);
-
-	-moz-box-shadow: 0 1px 0 0 #999, 0 2px 0 0 #fff inset;
-	-webkit-box-shadow: 0 1px 0 0 #999, 0 2px 0 0 #fff inset;
-	box-shadow: 0 1px 0 0 #999, 0 2px 0 0 #fff inset;
-
+	
 	border: 1px solid #5ba1d0;
 	background-color: #f7f7f7;
 	padding: 0;
-   
-	input {
-		width: 100%;
-		height: 50px;
-		
-		display: block;
-		
-		border: 0;
-		background-color: transparent;
 
-		padding-left: 10px;
-		padding-right: 10px;
-		
-		&:not(:first-child) {
-			@include mdmc-box-shadow(0, -1px, 0, 0, #e3e3e3);
-			
-			border-top: 1px solid #fff;
-		}
-		
-		&:focus {
-			outline: none;
-		}
+	-webkit-box-shadow: 0 2px 1px -1px #999;
+	   -moz-box-shadow: 0 2px 1px -1px #999;
+	        box-shadow: 0 2px 1px -1px #999;
+	        
+	&.error {
+		border: 1px solid red;
 	}
 }
 
-.cta-button {
+.login-button {
 	@include button-base;
+	@include button-style(#f27303, true, false);
+	@include radius(10px);
 	@include single-transition;
 	
-	width: 100%;
-	margin: 0;
-	padding-left: 10px;
-	padding-right: 10px;
+	color: #fff;
 	
-	border: 0;
-
-	&.primary {
-		@include button-style(#f27303, true, false);
-		
-		&.large {
-			@include radius(10px);
-			@include mdmc-box-shadow(0, 2.5px, 0, 0, #b25a00);	
-			
-			font-size: emCalc(15px);
-			height: 50px;
-		}
-		
-		&.small {
-			@include radius(5px);
-			@include mdmc-box-shadow(0, 1px, 0, 0, #b25a00);
-
-			font-size: emCalc(10px);
-			height: 25px;
-		}
-	}
-
-	&.secondary {
-		@include button-style(#eaeaea, true, false);
-		
-		color: #7f7f7f;
-		
-		&.large {
-			@include radius(10px);	
-			@include mdmc-box-shadow(0, 2.5px, 0, 0, #c7c7c7);
-			
-			font-size: emCalc(15px);
-			height: 50px;
-		}
-		
-		&.small {
-			@include radius(5px);
-			@include mdmc-box-shadow(0, 1px, 0, 0, #c7c7c7);
-
-			font-size: emCalc(10px);
-			height: 25px;
-		}
-	}
-
-	&.tertiary {
-		@include button-style(#4898d4, true, false);
-
-		&.large {
-			@include radius(10px);
-			@include mdmc-box-shadow(0, 2.5px, 0, 0, #4981ab);
-			
-			font-size: emCalc(15px);
-			height: 50px;
-		}
-		
-		&.small {
-			@include radius(5px);
-			@include mdmc-box-shadow(0, 1px, 0, 0, #4981ab);
-
-			font-size: emCalc(10px);
-			height: 25px;
-		}		
-	}
+	-webkit-box-shadow: 0 2px 0 0 #b25a00;
+	   -moz-box-shadow: 0 2px 0 0 #b25a00;
+	        box-shadow: 0 2px 0 0 #b25a00;
 }
 
 // TOPBAR
