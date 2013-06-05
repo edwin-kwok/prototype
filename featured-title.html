@@ -10,7 +10,9 @@
 
 	<title>Disney Movie Club - Featured Title</title>
 
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito|Ubuntu">
 	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/header.css" />
 	<link rel="stylesheet" href="css/featured-title.css" />
 
 	<script src="js/vendor/custom.modernizr.js"></script>
@@ -19,262 +21,30 @@
 	<!-- HEADER SECTION STARTS HERE -->
 	<header class="mdmc-header">
 		<section>
-			<nav class="top-bar">
-				<ul class="title-area">
-					<!-- this li with class "name" is required by foundation in order for top-bar to work correctly -->
-					<li class="name">
-						 <h1>Disney Movie Club</h1>
-					</li>
-					
-					<li class="toggle-topbar menu-icon">
-						<a href="#"><span></span></a>
-					</li>
-
-					<li class="topbar-icons">
-						<a class="small radius button" href="#">Cart</a>
-						<a class="small radius button" href="#">Search</a>
-					</li>
-				</ul>
-
-				<section class="top-bar-section">
-					<!-- Left Nav Section -->
-					<ul class="left">
-						<li class="divider"></li>
-						
-						<li class="active">
-							<a href="#">Account Settings</a>
-						</li>
-						<li>
-							<a href="#">Wishlist</a>
-						</li>
-						<li class="divider"></li>
-						
-						<li class="has-dropdown">
-							<a href="#">Special Offers</a>
-							
-							<ul class="dropdown">
-								<li><label>Top Offers This Month</label></li>
-								<li class="divider"></li>
-								
-								<li>
-									<a href="#">Shop $8 DVD Sale Titles</a>
-								</li>
-								<li>
-									<a href="#">Monsters University Movie Ticket Offer</a>
-								</li>
-								<li>
-									<a href="#">Father's Day Savings</a>
-								</li>
-								<li>
-									<a href="#">$4.99 Blu-ray Upgrade Offer</a>
-								</li>
-								<li class="divider"></li>
-								
-								<li><a href="#">See all &rarr;</a></li>
-							</ul>
-						</li>
-
-						<li class="has-dropdown">
-							<a href="#">All</a>
-							
-							<ul class="dropdown">
-								<li><label>All</label></li>
-								<li class="divider"></li>
-								
-								<li class="has-dropdown">
-									<a href="#">Animated</a>
-							
-									<ul class="dropdown">
-										<li><label>Animated</label></li>
-										<li class="divider"></li>
-										
-										<li>
-											<a href="#">Pixar</a>
-										</li>
-										<li>
-											<a href="#">Animated Classics</a>
-										</li>
-										<li>
-											<a href="#">Animated Favorites</a>
-										</li>
-										<li>
-											<a href="#">Princess/Fairies</a>
-										</li>											
-										<li>
-											<a href="#">Marvel</a>
-										</li>											
-										<li>
-											<a href="#">Disney Channel</a>
-										</li>											
-										<li>
-											<a href="#">Preschool</a>
-										</li>											
-										<li>
-											<a href="#">Disney Junior</a>
-										</li>											
-										<li>
-											<a href="#">Winnie The Pooh</a>
-										</li>											
-										<li>
-											<a href="#">Little Einstein</a>
-										</li>											
-										<li>
-											<a href="#">Learning Series</a>
-										</li>											
-										<li>
-											<a href="#">Studio Ghibli</a>
-										</li>											
-										
-										<li class="divider"></li>
-										
-										<li><a href="#">See all &rarr;</a></li>
-									</ul>
-								</li>
-
-								<li class="has-dropdown">
-									<a href="#">Live Action</a>
-									
-									<ul class="dropdown">
-										<li><label>Live Action</label></li>
-										<li class="divider"></li>
-										
-										<li>
-											<a href="#">Disney Family</a>
-										</li>
-										<li>
-											<a href="#">Action/Adventure</a>
-										</li>
-										<li>
-											<a href="#">Disney Dogs</a>
-										</li>
-										<li>
-											<a href="#">Muppets</a>
-										</li>
-										<li>
-											<a href="#">DVD Exclusives</a>
-										</li>
-										<li>
-											<a href="#">Original Classics</a>
-										</li>
-										<li>
-											<a href="#">Learning Series</a>
-										</li>
-										<li>
-											<a href="#">Disney Channel</a>
-										</li>
-										<li>
-											<a href="#">Documentary</a>
-										</li>
-										<li>
-											<a href="#">World Cinema</a>
-										</li>
-										<li class="divider"></li>
-										
-										<li><a href="#">See all &rarr;</a></li>
-									</ul>
-								</li>
-								
-								<li class="has-dropdown">
-									<a href="#">Grown-Ups Hits</a>
-									
-									<ul class="dropdown">
-										<li><label>Grown-Ups Hits</label></li>
-										<li class="divider"></li>
-										
-										<li>
-											<a href="#">Marvel</a>
-										</li>
-										<li>
-											<a href="#">Action/Adventure</a>
-										</li>
-										<li>
-											<a href="#">Comedy</a>
-										</li>
-										<li>
-											<a href="#">Romance</a>
-										</li>
-										<li>
-											<a href="#">Drama</a>
-										</li>
-										<li>
-											<a href="#">Suspense/Thriller</a>
-										</li>
-										<li>
-											<a href="#">TV Box Sets</a>
-										</li>
-										<li class="divider"></li>
-										
-										<li><a href="#">See all &rarr;</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
+			<div class="masthead">
+				<div class="menu-icon">
+					<div>
+						<a href="#" title="Disney Movie Club Main Menu"><span>Disney Movie Club Main Menu</span></a>
+					</div>
+				</div>
 	
-						<li class="has-dropdown">
-							<a href="#">Bestsellers</a>
-							
-							<ul class="dropdown">
-								<li><label>Member's Top Five</label></li>
-								<li class="divider"></li>
-								
-								<li>
-									<a href="#">The Princess And The Frog</a>
-								</li>
-								<li>
-									<a href="#">Tangled</a>
-								</li>
-								<li>
-									<a href="#">Toy Story Special Edition</a>
-								</li>
-								<li>
-									<a href="#">Marvel's The Avengers</a>
-								</li>
-								<li>
-									<a href="#">Cinderella DVD Combo Pack</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="has-dropdown">
-							<a href="#">Recent Arrivals</a>
-							
-							<ul class="dropdown">
-								<li><label>Recent Arrivals</label></li>
-								<li class="divider"></li>
-								
-								<li>
-									<a href="#">Animated</a>
-								</li>
-								<li>
-									<a href="#">Live Action</a>
-								</li>
-								<li>
-									<a href="#">Grown-Ups Hits</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="has-dropdown">
-							<a href="#">More Magic</a>
-							
-							<ul class="dropdown">
-								<li><label>More Magic</label></li>
-								<li class="divider"></li>
-								
-								<li>
-									<a href="#">$8 DVD Sale</a>
-								</li>
-								<li>
-									<a href="#">Collector's Sets</a>
-								</li>
-								<li>
-									<a href="#">Merchandise</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
-			</nav>
+				<div class="dmc-logo">
+					<h1>
+						<!-- This should take user to the home page of DMC Mobile site, please update URL. -->
+						<a href="#" title="Disney Movie Club"><span>Disney Movie Club</span></a>
+					</h1>
+				</div>
+				
+				<div class="utility-icons">
+					<div class="search-icon">
+						<a href="#" title="Search Disney Movies"><span>Search Disney Movies</span></a>
+					</div>
+					
+					<div class="cart-icon">
+						<a href="#" title="Shopping Cart"><span>Shopping Cart</span></a>
+					</div>
+				</div>
+			</div>
 		</section>
 	</header>
 
@@ -397,20 +167,20 @@
 				</section>
 			</article>
 		</section>
+
+		<!-- FOOTER SECTION STARTS HERE -->
+		<footer class="mdmc-footer">
+			<section>
+			</section>
+		</footer>
 	</section>
-
-	<!-- FOOTER SECTION STARTS HERE -->
-	<footer class="mdmc-footer">
-		<section>
-		</section>
-	</footer>
-
+	
 	<script src="js/vendor/jquery-1.9.1.min.js"></script>
+	<script src="js/vendor/jquery.sidr-1.1.1.min.js"></script>
 	<script src="js/vendor/jquery.easing-1.3.min.js"></script>
 	<script src="js/vendor/jquery.iosslider-1.2.7.min.js"></script>
 
 	<script src="js/foundation/foundation.js"></script>
-	<script src="js/foundation/foundation.topbar.js"></script>
 	<script src="js/featured-title.js"></script>
   
 	<script>
