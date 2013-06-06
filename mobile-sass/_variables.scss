@@ -1166,12 +1166,12 @@ $button-font-align: center; // EDK
 
 // Background color for the top bar
 
-// $topbar-bg:                            #111 !default;
+$topbar-bg: #fff; // EDK #111 !default;
 
 // Height and margin
 
-// $topbar-height:                        45px;
-// $topbar-margin-bottom:                 emCalc(30px);
+$topbar-height: 58px; // EDK 45px;
+$topbar-margin-bottom: 0; // EDK emCalc(30px);
 
 // Control Input height for top bar
 

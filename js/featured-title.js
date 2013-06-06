@@ -11,12 +11,13 @@
 var featuredTitleView = (function() {
 	"use strict";
 	
-	var $carouselCtn = $(".mdmc-featured-title.mdmc-carousel .mdmc-slider-container"),
-		$carousel = $carouselCtn.children(".slider"),
-		$sliderCtn = $(".mdmc-featured-title.mdmc-slider .mdmc-slider-container"),
-		$slider = $sliderCtn.children(".slider"),
+	var $topbarContainer = $(".mdmc-header .contain-to-grid.sticky"),
+		$carouselContainer = $(".mdmc-featured-title.mdmc-carousel .mdmc-slider-container"),
+		$carousel = $carouselContainer.children(".slider"),
+		$sliderContainer = $(".mdmc-featured-title.mdmc-slider .mdmc-slider-container"),
+		$slider = $sliderContainer.children(".slider"),
 		$promos = $(".mdmc-featured-title.mdmc-promos section"),
-		carouselTimer = parseInt($carouselCtn.attr("data-timer") || 0),
+		carouselTimer = parseInt($carouselContainer.attr("data-timer") || 0),
 		
 		onSlideItemChange = function(args) {
 			$(".selectors .item").removeClass("selected");
@@ -24,27 +25,27 @@ var featuredTitleView = (function() {
 		};
 	
 	var FeaturedTitleView = function() {
-		var displayBullets = $carouselCtn.attr("data-bullets") || "false";
+		var displayBullets = $carouselContainer.attr("data-bullets") || "false";
 		
 		if(displayBullets === "false") {
-			$carouselCtn.children(".selectors-block").hide();
-			$carouselCtn.parent().css("padding", "0 0 45% 0");
+			$carouselContainer.children(".selectors-block").hide();
+			$carouselContainer.parent().css("padding", "0 0 45% 0");
 		}
-		
-/*		if($mainMenu.length > 0) {
-			$topbarCtn.foundation("topbar", function(response) {
+
+		if($topbarContainer.length > 0) {
+			$topbarContainer.foundation("topbar", function(response) {
 				if(response.errors.length !== 0) {
 					console.log("FeaturedTitleView: Failed to initialize topbar!");
 				}
 			});
 		}
 		else {
-			console.log("FeaturedTitleView: Cannot find $topbarCtn!");
-		}*/
+			console.log("FeaturedTitleView: Cannot find $topbarContainer!");
+		}
 	}
 	
 	FeaturedTitleView.prototype.init = function() {
-		$carouselCtn.iosSlider({
+		$carouselContainer.iosSlider({
 			snapToChildren: true,
 			desktopClickDrag: true,
 			navSlideSelector: $(".selectors .item"),
@@ -54,7 +55,7 @@ var featuredTitleView = (function() {
 			autoSlideTimer: (carouselTimer > 0)? carouselTimer: 0
 		});
 		
-		$sliderCtn.iosSlider({
+		$sliderContainer.iosSlider({
 			snapToChildren: true,
 			desktopClickDrag: true,
 		});

@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-$masthead-height: 58px;
-
 @mixin mdmc-box-shadow($horizontal-offset, $vertical-offset, $blur-radius, $spread-radius, $color, $inset: "") {
 	-moz-box-shadow: $horizontal-offset $vertical-offset $blur-radius $spread-radius $color #{$inset};
 	-webkit-box-shadow: $horizontal-offset $vertical-offset $blur-radius $spread-radius $color #{$inset};
@@ -10,8 +8,8 @@ $masthead-height: 58px;
 
 // this mixin will setup icons to be vertically centered in the parent container
 @mixin valign-icon-container($icon-width, $icon-height) {
-	$half: ($masthead-height - $icon-height) / 2;
-	$remainder: ($masthead-height - $icon-height) % 2;
+	$half: ($topbar-height - $icon-height) / 2;
+	$remainder: ($topbar-height - $icon-height) % 2;
 
 	width: $icon-width;
 	height: $icon-height;
