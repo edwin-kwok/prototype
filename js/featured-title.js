@@ -11,8 +11,7 @@
 var featuredTitleView = (function() {
 	"use strict";
 	
-	var $topbarCtn = $(".mdmc-header>section"),
-		$carouselCtn = $(".mdmc-featured-title.mdmc-carousel .mdmc-slider-container"),
+	var $carouselCtn = $(".mdmc-featured-title.mdmc-carousel .mdmc-slider-container"),
 		$carousel = $carouselCtn.children(".slider"),
 		$sliderCtn = $(".mdmc-featured-title.mdmc-slider .mdmc-slider-container"),
 		$slider = $sliderCtn.children(".slider"),
@@ -32,7 +31,7 @@ var featuredTitleView = (function() {
 			$carouselCtn.parent().css("padding", "0 0 45% 0");
 		}
 		
-		if($topbarCtn.length > 0) {
+/*		if($mainMenu.length > 0) {
 			$topbarCtn.foundation("topbar", function(response) {
 				if(response.errors.length !== 0) {
 					console.log("FeaturedTitleView: Failed to initialize topbar!");
@@ -41,7 +40,7 @@ var featuredTitleView = (function() {
 		}
 		else {
 			console.log("FeaturedTitleView: Cannot find $topbarCtn!");
-		}
+		}*/
 	}
 	
 	FeaturedTitleView.prototype.init = function() {
