@@ -4,10 +4,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="format-detection" content="telephone=no" />
 
-	<title>Disney Movie Club - Forgot Password</title>
+	<title>Disney Movie Club - Account Reset</title>
 
 	<link rel="stylesheet" href="css/normalize.css" />
-	<link rel="stylesheet" href="css/forgot-password.css" />
+	<link rel="stylesheet" href="css/account-reset.css" />
 
 	<script src="js/vendor/custom.modernizr.js"></script>
 </head>
@@ -26,30 +26,25 @@
 
 
 		<section class="message">
-			<h2>Forgot Your Password?</h2>
-			<p>Enter the e-mail address associated with your account. Your account information will be sent to the e-mail address provided. </p>
+			<h2>Reset Your Account</h2>
+			<p>Enter your existing membership number and ZIP code to register a new e-mail address. </p>
 
 			<!--Error message to display when the email is not found or no response from alta -->
 			<p class="error">
-				Your password cannot be recovered through the website at this time. Please call Customer Support at 1-888-362-4587 from 8 a.m. to 1 a.m., Eastern Time, Monday-Friday to get your password reset.
+				Your account cannot be recovered through the website at this time. Please call Customer Support at 1-888-362-4587 from 8 a.m. to 1 a.m., Eastern Time, Monday-Friday to get your account reset.
 			</p>
 		</section>
 		<form method="POST" action="#">
-			<input type="hidden" name="langId" value="-1" />
-			<input type="hidden" name="storeId" value="10001">
-			<input type="hidden" name="catalogId" value="10051">
-			<input type="hidden" name="catalogIdCA" value="10151">
-			<input type="hidden" name="password" value="#" />
 
 			<fieldset class="credentials">
 				<div>
 					<div class="rounded-corners">
-						<input type="text" placeholder="E-mail address" autocorrect="off" autofocus required>
+						<input type="text" placeholder="Membership Number" autocorrect="off" autofocus required>
+						<input type="text" placeholder="Five-Digit Zip Code" autocorrect="off" autofocus required>
 					</div>
 					
 					<div>
-						<input class="login-button upper-case" type="submit" value="Retrieve Password">
-						<p>No longer have access to the registered e-mail address for your account? <a href="#">Click here to reset.</a></p>
+						<input class="login-button upper-case" type="submit" value="Continue">
 						<p class = "go-back">Back to login? <a href="#">Click here.</a>
 					</div>
 				</div>
