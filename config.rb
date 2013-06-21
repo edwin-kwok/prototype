@@ -1,4 +1,4 @@
-require 'zurb-foundation'
+// require 'zurb-foundation'
 # Require any additional compass plugins here.
 
 
@@ -6,7 +6,7 @@ require 'zurb-foundation'
 http_path = "/"
 css_dir = "css"
 sass_dir = "mobile-sass"
-images_dir = "img"
+images_dir = "mobile-img"
 javascripts_dir = "js"
 
 # You can select your preferred output style here (can be overridden via the command line):

@@ -3,7 +3,7 @@
 //
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
-// for compatibility with brower-based text zoom or user-set defaults.
+// for compatibility with browser-based text zoom or user-set defaults.
 $base-font-size: 100% !default;
 
 // $base-line-height is 24px while $base-font-size is 16px
@@ -18,7 +18,7 @@ $em-base: 16px !default;
 
 // Working in ems is annoying. Think in pixels by using this handy function, emCalc(#px)
 @function emCalc($pxWidth) {
-	@return $pxWidth / $em-base * 1em;
+  @return $pxWidth / $em-base * 1em;
 }
 
 // Various global styles
@@ -76,7 +76,6 @@ $body-font-style: normal; // EDK
 // $include-html-clearing-classes: $include-html-classes;
 // $include-html-alert-classes: $include-html-classes;
 // $include-html-nav-classes: $include-html-classes;
-// $include-html-top-bar-classes: $include-html-classes;
 // $include-html-label-classes: $include-html-classes;
 // $include-html-panel-classes: $include-html-classes;
 // $include-html-pricing-classes: $include-html-classes;
@@ -86,25 +85,16 @@ $body-font-style: normal; // EDK
 
 // Media Queries
 
-// $small-screen: 768px;
-// $medium-screen: 1280px;
-$large-screen: 1440px;
+// $small-screen: emCalc(768px);
+// $medium-screen: emCalc(1280px);
+// $large-screen: emCalc(1440px);
 
 // $screen: "only screen";
 // $small: "only screen and (min-width: #{$small-screen})";
 // $medium: "only screen and (min-width: #{$medium-screen})";
-$large: "only screen and (min-width: #{$large-screen})";
+// $large: "only screen and (min-width: #{$large-screen})";
 // $landscape: "only screen and (orientation: landscape)";
 // $portrait: "only screen and (orientation: portrait)";
-
-//// Cursors
-
-//Custom use example -> $cursor-default-value: url(http://cursors-site.net/path/to/custom/cursor/default.cur),progress;
-
-// $cursor-crosshair-value: "crosshair";
-// $cursor-default-value: "default";
-// $cursor-pointer-value: "pointer";
-// $cursor-help-value: "help";
 
 //
 // Grid Variables
@@ -121,7 +111,7 @@ $large: "only screen and (min-width: #{$large-screen})";
 // Maximum number of block grid elements per row
 
 // $block-grid-elements: 12;
-// $block-grid-default-spacing: emCalc(20px);
+// $block-grid-default-spacing: 10px;
 
 // Enables media queries for block-grid classes. Set to false if writing semantic HTML.
 
@@ -754,6 +744,7 @@ $button-font-align: center; // EDK
 // Caption styles
 
 // $orbit-container-bg: #f5f5f5;
+// $orbit-caption-bg-old-browser: #000;
 // $orbit-caption-bg-old: rgb(0,0,0);
 // $orbit-caption-bg: rgba(0,0,0,0.6);
 // $orbit-caption-font-color: #fff;
@@ -775,7 +766,7 @@ $button-font-align: center; // EDK
 
 // Slide numbers
 
-// $orbit-slide-number-bg: rgba(0,0,0,0);
+// $orbit-slide-number-bg: rgb(0,0,0);
 // $orbit-slide-number-font-color: #fff;
 // $orbit-slide-number-padding: emCalc(5px);
 
@@ -808,7 +799,7 @@ $button-font-align: center; // EDK
 
 // Disabled anchor links
 
-// $pagination-link-unavailable-cursor: $cursor-default-value;
+// $pagination-link-unavailable-cursor: default;
 // $pagination-link-unavailable-font-color: #999;
 // $pagination-link-unavailable-bg-active: transparent;
 
@@ -817,7 +808,7 @@ $button-font-align: center; // EDK
 // $pagination-link-current-background: $primary-color;
 // $pagination-link-current-font-color: #fff;
 // $pagination-link-current-font-weight: bold;
-// $pagination-link-current-cursor: $cursor-default-value;
+// $pagination-link-current-cursor: default;
 // $pagination-link-current-active-bg: $primary-color;
 
 //
@@ -1039,7 +1030,7 @@ $button-font-align: center; // EDK
 // $sub-nav-active-bg: $primary-color;
 // $sub-nav-active-color: #fff;
 // $sub-nav-active-padding: emCalc(3px) emCalc(9px);
-// $sub-nav-active-cursor: $cursor-default-value;
+// $sub-nav-active-cursor: default;
 
 //
 // Switch Variables
@@ -1166,68 +1157,50 @@ $button-font-align: center; // EDK
 
 // Background color for the top bar
 
-$topbar-bg: #fff; // EDK #111 !default;
+// $topbar-bg: #111;
 
 // Height and margin
 
 $topbar-height: 58px; // EDK 45px;
 $topbar-margin-bottom: 0; // EDK emCalc(30px);
 
-// Control Input height for top bar
+// Input height for top bar
 
-// $topbar-input-height:                  2.45em;
+// $topbar-input-height: 2.45em;
 
-// Controlling the styles for the title in the top bar
+// Title in the top bar
 
-// $topbar-title-weight:                  bold;
-// $topbar-title-font-size:               emCalc(17px);
+// $topbar-title-weight: bold;
+// $topbar-title-font-size: emCalc(17px);
 
-// Style the top bar dropdown elements
+// Link colors and styles for top-level nav
 
-// $topbar-dropdown-bg:                   #222;
-// $topbar-dropdown-link-color:           #fff;
-// $topbar-dropdown-link-bg:              lighten($topbar-bg, 5%);
-// $topbar-dropdown-toggle-size:          5px;
-// $topbar-dropdown-toggle-color:         #fff;
-// $topbar-dropdown-toggle-alpha:         0.5;
+$topbar-link-color: #2287d9; // EDK #fff;
+$topbar-link-weight: normal; // EDK bold;
+$topbar-link-font-size: emCalc(18px); // EDK emCalc(13px);
+// $topbar-link-hover-lightness: -30% !default; // Darken by 30%
 
-// Set the link colors and styles for top-level nav
+// Top bar dropdown elements
 
-// $topbar-link-color:                    #fff;
-// $topbar-link-color-hover:              #fff;
-// $topbar-link-color-active:             #fff;
-// $topbar-link-weight:                   bold;
-// $topbar-link-font-size:                emCalc(13px);
-// $topbar-link-hover-lightness:          -30%; // Darken by 30%
-// $topbar-link-bg-hover:                 darken($topbar-bg, 3%);
-// $topbar-link-bg-active:                darken($topbar-bg, 3%);
-
-// $topbar-dropdown-label-color:          #555;
-// $topbar-dropdown-label-text-transform: uppercase;
-// $topbar-dropdown-label-font-weight:    bold;
-// $topbar-dropdown-label-font-size:      emCalc(10px);
+$topbar-dropdown-bg: #f6f6f6; // EDK #333;
+// $topbar-dropdown-link-color: #fff;
+// $topbar-dropdown-toggle-size: 5px;
+// $topbar-dropdown-toggle-color: #fff;
+// $topbar-dropdown-toggle-alpha: 0.5;
+$dropdown-label-color: #2287d9; // EDK #555;
 
 // Top menu icon styles
 
-// $topbar-menu-link-transform:           uppercase;
-// $topbar-menu-link-font-size:           emCalc(13px);
-// $topbar-menu-link-weight:              bold;
-// $topbar-menu-link-color:               #fff;
-// $topbar-menu-icon-color:               #fff;
-// $topbar-menu-link-color-toggled:       #888;
-// $topbar-menu-icon-color-toggled:       #888;
+// $topbar-menu-link-transform: uppercase;
+// $topbar-menu-link-font-size: emCalc(13px);
+// $topbar-menu-link-weight: bold;
+// $topbar-menu-link-color: #fff;
+// $topbar-menu-icon-color: #fff;
+// $topbar-menu-link-color-toggled: #888;
+// $topbar-menu-icon-color-toggled: #888;
 
 // Transitions and breakpoint styles
 
-// $topbar-transition-speed:              300ms;
-// $topbar-breakpoint:                    emCalc(940px); // Change to 9999px for always mobile layout
-// $topbar-media-query:                   "only screen and (min-width:"#{$topbar-breakpoint}")";
-
-// Divider Styles
-
-// $topbar-divider-border-bottom:         solid 1px lighten($topbar-bg, 10%);
-// $topbar-divider-border-top:            solid 1px darken($topbar-bg, 10%);
-
-// Sticky Class
-
-// $topbar-sticky-class:                  ".sticky";
+// $topbar-transition-speed: 300ms;
+// $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
+// $topbar-media-query: "only screen and (min-width: "#{$topbar-breakpoint}")";

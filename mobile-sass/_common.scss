@@ -12,10 +12,10 @@
 	box-shadow: none;
 }
 
-// this mixin will setup icons to be vertically centered in the header
-@mixin mdmc-valign-header-icon($icon-width, $icon-height) {
-	$half: ($topbar-height - $icon-height) / 2;
-	$remainder: ($topbar-height - $icon-height) % 2;
+// this mixin will setup icons to be vertically centered in the parent container
+@mixin mdmc-valign-icon($container-height, $icon-width, $icon-height) {
+	$half: ($container-height - $icon-height) / 2;
+	$remainder: ($container-height - $icon-height) % 2;
 
 	width: $icon-width;
 	height: $icon-height;
