@@ -1175,14 +1175,14 @@ $topbar-margin-bottom: 0; // EDK emCalc(30px);
 
 // Link colors and styles for top-level nav
 
-$topbar-link-color: #2287d9; // EDK #fff;
+// $topbar-link-color: #fff;
 $topbar-link-weight: normal; // EDK bold;
-$topbar-link-font-size: emCalc(18px); // EDK emCalc(13px);
+$topbar-link-font-size: emCalc(16px); // EDK emCalc(13px);
 // $topbar-link-hover-lightness: -30% !default; // Darken by 30%
 
 // Top bar dropdown elements
 
-$topbar-dropdown-bg: #f6f6f6; // EDK #333;
+$topbar-dropdown-bg: #0b5da0; // EDK #333;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
