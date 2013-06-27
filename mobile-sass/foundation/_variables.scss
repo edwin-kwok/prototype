@@ -85,8 +85,8 @@ $body-font-style: normal; // EDK
 
 // Media Queries
 
-// $small-screen: emCalc(768px);
-// $medium-screen: emCalc(1280px);
+$small-screen: emCalc(320px); // EDK emCalc(768px);
+$medium-screen: emCalc(768px); // EDK emCalc(1280px);
 // $large-screen: emCalc(1440px);
 
 // $screen: "only screen";
@@ -1182,12 +1182,12 @@ $topbar-link-font-size: emCalc(16px); // EDK emCalc(13px);
 
 // Top bar dropdown elements
 
-$topbar-dropdown-bg: #0b5da0; // EDK #333;
+$topbar-dropdown-bg: #0e67b0; // EDK #333;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
 // $topbar-dropdown-toggle-alpha: 0.5;
-$dropdown-label-color: #2287d9; // EDK #555;
+$dropdown-label-color: #fff; // EDK #555;
 
 // Top menu icon styles
 
@@ -1202,5 +1202,5 @@ $dropdown-label-color: #2287d9; // EDK #555;
 // Transitions and breakpoint styles
 
 // $topbar-transition-speed: 300ms;
-// $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
+$topbar-breakpoint: $medium-screen; // EDK emCalc(940px); // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width: "#{$topbar-breakpoint}")";

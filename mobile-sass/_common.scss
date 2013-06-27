@@ -23,6 +23,30 @@
 	margin: $half + $remainder auto $half auto;
 }
 
+@mixin media-breakpoint($media, $orientation: "") {
+	@if $orientation == "portrait" {
+		@if $media == $small-screen or $media == $medium-screen or $media == $large-screen {
+			@media only screen and (min-width: $media) and (orientation: portrait) {
+				@content;
+			}
+		}
+	}
+	@else if $orientation == "landscape" {
+		@if $media == $small-screen or $media == $medium-screen or $media == $large-screen {
+			@media only screen and (min-width: $media) and (orientation: landscape) {
+				@content;
+			}
+		}
+	}
+	@else {
+		@if $media == $small-screen or $media == $medium-screen or $media == $large-screen {
+			@media only screen and (min-width: $media) {
+				@content;
+			}
+		}
+	}
+}
+
 // each will be a row in the grid
 // all immediate child of section type is a 12 column grid
 .mdmc-header,
